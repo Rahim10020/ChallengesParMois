@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!--Page des challenges-->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/monStyle.css'  %}">
+    <title>Challenges</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'page_acceuil' %}">Accueil</a></li>
+                <li><a href="{% url 'challenge_page' %}">Challenges</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home">
+        <div class="chal">  
+            <h2>Challenges</h2>
+            <div class="ligne"></div>
+                <ul>
+                    {% for challenge in mois %}
+                    <li><a href="{% url 'challenges_par_mois' challenge.mois|lower %}">{{ challenge.mois }}</a></li>
+                    {% endfor %}
+                </ul>
+        </div>
+    </div>
+    <footer class="foot">EPL-Copyright @ 2024- Tous droits reserves</footer>
+</body>
+</html>

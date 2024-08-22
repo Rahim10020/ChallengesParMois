@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!--Page d'acceuil-->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/monStyle.css'  %}">
+    <title>Home - challenges</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'page_acceuil' %}">Accueil</a></li>
+                <li><a href="{% url 'challenge_page' %}">Challenges</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="home">
+        <div>
+            <h2>Bienvenu sur notre Site</h2>
+            <p>
+                <span>Ce site propose des Challenges en fonction du mois.</span>
+                Pour voir les challenges disponibles, rendez-vous dans la section Challenges. En ce qui conserne les
+                Challenges en fonction du mois, consulter la section mois.
+            </p>
+        </div>
+    </div>
+    <footer>EPL-Copyright @ 2024- Tous droits reserves</footer>
+</body>
+</html>
